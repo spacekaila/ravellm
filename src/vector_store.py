@@ -45,7 +45,7 @@ class PatternVectorStore:
         documents = [self._pattern_to_text(p) for p in patterns]
         metadatas = [self._pattern_to_metadata(p) for p in patterns]
 
-        self.collection.add(
+        self.collection.upsert(
             ids=ids,
             embeddings=embeddings.tolist(),
             documents=documents,

@@ -37,7 +37,7 @@ class RavelryRAG:
         #self.chain = LLMChain(llm=self.llm, prompt=self.prompt)
         self.chain = self.prompt | self.llm | StrOutputParser()
 
-    def retrieve(self, query, n_results=5):
+    def retrieve(self, query, n_results=10):
         """Retrieve relevant patterns"""
         # Embed query
         query_embedding = self.embedder.encode(query)
