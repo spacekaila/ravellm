@@ -4,6 +4,18 @@ Not sure what to knit next? Ravellm has you covered.
 
 Intelligent knitting pattern recommender system using retrieval-augmented generation (RAG) to suggest patterns based on queries like "I want to knit lightweight summer socks" (using natural language processing, NLP). The system retrieves similar patterns from a vector database and uses an LLM to generate personalized recommendations with explanations.
 
+## Features
+
+- Data validation: checks for missing fields, ensures that patterns in multiple categories are only fetched and saved once.
+- Incremental updates: checks new pattern IDs against database pattern IDs before saving, ensures no duplicate patterns saved.
+
+**To Add**
+- Conversational memory: allow user to refine searches with followup queries like "I want something easier" or "but in worsted weight".
+- Recommendation guardrails: filters to recommend patterns of appropriate skill level or attributes.
+- Dynamic prompting: detect skill level from query (beginner to advanced) and adjust LLM prompt to give appropriate complexity.
+- Difficulty predictor: train a classifier on pattern metadata to predict difficulty level.
+- Evaluation metrics: calculate precision and recall for queries.
+
 ## Tech stack
 - SentenceTransformers
 - ChromaDB
