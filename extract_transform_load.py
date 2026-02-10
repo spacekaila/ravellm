@@ -5,7 +5,7 @@ import json
 
 def main():
 
-    with open("data/raw/patterns_4.json", "r") as file:
+    with open("data/raw/patterns_0.json", "r") as file:
         patterns = json.load(file)
 
     print(f"Adding {len(patterns)} patterns to the vector store")
